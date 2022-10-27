@@ -1,0 +1,5 @@
+AlbumTodas;Album de todas las fotos;EscenaMarvel.jpg-foco.jpg-girasol.jpg-mariposa.jpg-EncuentroTitan.jpg-PeleaTitan.jpg-bigotes3.jpg-michis.jpg-gatoLindo.png;null
+AlbumFavoritos;Album de las fotos favoritas;EscenaMarvel.jpg-foco.jpg;null
+Album1;Primer Album creado;mariposa.jpg;null
+Album 3;Creado desde la interfaz;bigotes3.jpg-gatoLindo.png;2022-07-12
+Album 4;Craedo desde la interdax;michis.jpg;2022-07-12

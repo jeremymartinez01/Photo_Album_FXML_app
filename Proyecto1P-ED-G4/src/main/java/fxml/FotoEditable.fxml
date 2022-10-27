@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estructuradatos.Proyecto1P.FotoEditableController">
+   <children>
+      <VBox fx:id="VboxFoto" prefHeight="319.0" prefWidth="374.0">
+         <children>
+            <ImageView fx:id="ImgviewFoto" fitHeight="320.0" fitWidth="375.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </VBox>
+      <HBox fx:id="hboxGeneralPersonas" layoutX="381.0" prefHeight="319.0" prefWidth="219.0">
+         <children>
+            <VBox fx:id="VboxPersonas" alignment="TOP_CENTER" prefHeight="319.0" prefWidth="118.0">
+               <children>
+                  <Label text="Personas" />
+                  <ComboBox fx:id="personasCB" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0">
+               <children>
+                  <TextField fx:id="personanueva" />
+                  <Button mnemonicParsing="false" onMouseClicked="#AgregarPersona" text="Agregar" />
+                  <Button mnemonicParsing="false" onMouseClicked="#ModificarPersona" text="Modificar" />
+                  <Button mnemonicParsing="false" onMouseClicked="#EliminarPersona" text="Eliminar" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button layoutX="139.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#EliminarFoto" text="Eliminar foto" />
+      <Button layoutX="352.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#GuardarCambios" text="Guardar Cambios" />
+   </children>
+</AnchorPane>

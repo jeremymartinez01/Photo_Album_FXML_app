@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" fx:id="raiz" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estructuradatos.Proyecto1P.VentanaVisualizacionController">
+   <children>
+      <BorderPane layoutX="3.0" layoutY="3.0" prefHeight="394.0" prefWidth="593.0">
+         <center>
+            <ImageView fx:id="ivFotoCentral" fitHeight="289.0" fitWidth="415.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+         <left>
+            <VBox prefHeight="289.0" prefWidth="84.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnAnterior" mnemonicParsing="false" onAction="#anteriorFoto" prefHeight="47.0" prefWidth="95.0" text="Anterior">
+                     <VBox.margin>
+                        <Insets left="2.0" top="120.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <VBox prefHeight="289.0" prefWidth="90.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnSiguiente" mnemonicParsing="false" onAction="#siguienteFoto" prefHeight="47.0" prefWidth="88.0" text="Siguiente">
+                     <VBox.margin>
+                        <Insets left="2.0" top="120.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </right>
+         <top>
+            <VBox prefHeight="48.0" prefWidth="593.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnVolver" mnemonicParsing="false" onAction="#volverVentana" text="Volver" />
+                        <Button fx:id="btneditar" mnemonicParsing="false" onAction="#CambiarVentanaEditar" text="Editar">
+                           <HBox.margin>
+                              <Insets left="450.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lbNumFoto" alignment="CENTER" contentDisplay="CENTER" prefHeight="47.0" prefWidth="592.0" text="?/?" />
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox prefHeight="60.0" prefWidth="593.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lbNombreFoto" prefHeight="36.0" prefWidth="192.0" text="Foto:" />
+                        <Label fx:id="lbFechaFoto" prefHeight="40.0" prefWidth="161.0" text="Fecha:">
+                           <HBox.margin>
+                              <Insets left="200.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

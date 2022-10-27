@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="494.0" prefWidth="662.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="estructuradatos.Proyecto1P.Ventana_AlbumController">
+   <children>
+      <TabPane prefHeight="494.0" prefWidth="662.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="biblioteca" text="Biblioteca">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutY="39.0" prefHeight="426.0" prefWidth="662.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="138.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="565.0" minWidth="10.0" prefWidth="524.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TreeView fx:id="list_Album" onMouseClicked="#listaAlbumes" prefHeight="200.0" prefWidth="200.0" />
+                              <SplitPane dividerPositions="0.17688679245283018" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <HBox prefHeight="72.0" prefWidth="523.0">
+                                             <children>
+                                                <HBox fx:id="hBoxImgeneral" alignment="CENTER" prefHeight="72.0" prefWidth="97.0">
+                                                   <children>
+                                                      <ImageView fitHeight="66.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../fotoss/imgGeneral.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children></HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <GridPane prefHeight="72.0" prefWidth="203.0">
+                                                        <columnConstraints>
+                                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                        </columnConstraints>
+                                                        <rowConstraints>
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                                                        </rowConstraints>
+                                                         <children>
+                                                            <Label fx:id="nombreAlbum" text="Label">
+                                                               <font>
+                                                                  <Font name="Bodoni MT Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="descricpcionAlbum" text="Label" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font name="Bodoni MT" size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button fx:id="btnFiltrar" mnemonicParsing="false" onAction="#filtrar" text="Filtrar">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin></Button>
+                                                      <Button mnemonicParsing="false" onAction="#aplicarFiltro" text="Aplicar">
+                                                         <HBox.margin>
+                                                            <Insets right="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button mnemonicParsing="false" onAction="#limpiarFiltro" text="Limpiar" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ScrollPane fx:id="scrollpaneBiblio" prefHeight="352.0" prefWidth="523.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="523.0">
+                                                   <children>
+                                                      <FlowPane fx:id="panel" hgap="15.0" prefHeight="337.0" prefWidth="508.0" vgap="15.0">
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding></FlowPane>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="15.0" />
+                                                   </padding></AnchorPane>
+                                            </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </GridPane>
+                        <ToolBar prefHeight="40.0" prefWidth="662.0">
+                          <items>
+                            <Button mnemonicParsing="false" onMouseClicked="#crearAlbum" text="Crear Album" />
+                          </items>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="edicion" text="Edición">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutY="39.0" prefHeight="426.0" prefWidth="662.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="138.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="565.0" minWidth="10.0" prefWidth="524.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TreeView fx:id="list_Album1" onMouseClicked="#listaAlbumesEdicion" prefHeight="200.0" prefWidth="200.0" />
+                              <SplitPane dividerPositions="0.17688679245283018" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" GridPane.columnIndex="1">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <HBox prefHeight="68.0" prefWidth="523.0">
+                                             <children>
+                                                <HBox fx:id="hBoxImgeneral1" alignment="CENTER" prefHeight="68.0" prefWidth="100.0">
+                                                   <children>
+                                                      <ImageView fitHeight="66.0" fitWidth="141.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../fotoss/imgGeneral.jpg" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children></HBox>
+                                                <HBox prefHeight="68.0" prefWidth="357.0">
+                                                   <children>
+                                                      <GridPane prefHeight="68.0" prefWidth="336.0">
+                                                         <columnConstraints>
+                                                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="263.0" minWidth="10.0" prefWidth="263.0" />
+                                                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="85.0" minWidth="0.0" prefWidth="0.0" />
+                                                         </columnConstraints>
+                                                         <rowConstraints>
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+                                                         </rowConstraints>
+                                                         <children>
+                                                            <Label fx:id="nombreAlbum1" text="Label">
+                                                               <font>
+                                                                  <Font name="Bodoni MT Bold" size="20.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="descricpcionAlbum1" text="Label" GridPane.rowIndex="1">
+                                                               <font>
+                                                                  <Font name="Bodoni MT" size="16.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Button mnemonicParsing="false" onMouseClicked="#editarNombre_Album" text="Editar" GridPane.columnIndex="1" />
+                                                            <Button mnemonicParsing="false" onMouseClicked="#editarDescrip_Album" text="Editar" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                         </children>
+                                                      </GridPane>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <ScrollPane fx:id="scrollpaneEdi" prefHeight="352.0" prefWidth="523.0">
+                                             <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="353.0" prefWidth="523.0">
+                                                   <children>
+                                                      <FlowPane fx:id="panelEdicion" hgap="15.0" prefHeight="337.0" prefWidth="508.0" vgap="15.0">
+                                                         <padding>
+                                                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                      </FlowPane>
+                                                   </children></AnchorPane>
+                                             </content>
+                                          </ScrollPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </GridPane>
+                        <ToolBar prefHeight="40.0" prefWidth="662.0">
+                           <items>
+                              <Button mnemonicParsing="false" onAction="#importarFoto" text="Importar Foto" />
+                              <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="546.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onMouseClicked="#eliminarAlbum" text="Eliminar Albúm" />
+                                 </children>
+                              </HBox>
+                           </items>
+                        </ToolBar>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

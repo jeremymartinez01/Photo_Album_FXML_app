@@ -1,0 +1,4 @@
+EscenaMarvel.jpg;Thor-CaptainAmerica-HawkEye-IronMan-Hulk;New York;Escena de batalla en New York;1
+foco.jpg;null;null;Es un foco;0
+girasol.jpg;null;null;Es un girasol;0
+mariposa.jpg;null;null;Es una mariposa;0
